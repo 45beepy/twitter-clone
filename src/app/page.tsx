@@ -53,7 +53,7 @@ const page = () => {
                     <item.icon/>
                   </div>
                   <div>
-                    {item.title !== "Twitter" && item.title }
+                    {item.title !== "Twitter" && <div>{item.title }</div>}
                   </div>
                 </Link>
               ))
