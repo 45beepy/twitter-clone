@@ -1,3 +1,4 @@
+import { BsDot } from "react-icons/Bs"
 import LeftSidebar from "./components/LeftSidebar"
 
 const page = () => {
@@ -27,8 +28,32 @@ const page = () => {
           <div className="flex flex-col">
             {
               Array.from({length:5}).map((_,i)=>(
-                <div key={i} className="border-t-[0.5px] border-b-[0.5px] px-4">
+                <div key={i} className="border-t-[0.5px] border-b-[0.5px] p-4 flex spacce-x-4">   
+                  <div >
+                    <div className="w-10 h-10 bg-slate-200 rounded-full"/>
                   </div>
+                  <div className="flex flex-col px-4 space-y-4">
+                    <div className="flex items-center space-x-1">
+                      <div>Rusted Reaper</div>
+                      <div>@rustedreaper</div>
+                      <div>
+                        <BsDot/>
+                      </div>
+                      <div>1 hour ago</div>
+                    </div>
+                    <div className="text-white text-sm">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum accusantium eveniet neque explicabo fugit necessitatibus odio, nemo suscipit. Ducimus officia ratione repudiandae ipsum fugiat magnam aliquid quasi earum consequuntur? Culpa libero, magnam placeat consequatur sapiente consectetur ullam ea recusandae porro iusto, nemo tempora unde perspiciatis quibusdam quis aperiam nam eius iure fugit, nihil possimus ut? Veniam accusantium magni minus. Incidunt earum, enim, eius aperiam quaerat omnis eveniet maiores consectetur porro facere non corrupti, est corporis iste ullam repellendus ut similique autem natus! Dicta ducimus officia, quam asperiores molestias reiciendis voluptates nihil illo voluptas eligendi consequuntur tempore rerum. Eum, at et.
+                    </div>
+                    <div className="bg-slate-400 aspect-square w-full h-96 rounded-xl"></div>
+                    <div className="flex intems-center space=x-2 w-full">
+                      <div>C</div>
+                      <div>Q</div>
+                      <div>L</div>
+                      <div>S</div>
+                      <div>SH</div>
+                    </div>  
+                  </div>   
+                </div>
               ))
             }
           </div>
