@@ -4,6 +4,7 @@ import {BsBell,BsBookmark, BsThreeDots} from 'react-icons/Bs'
 import {HiOutlineHashtag} from 'react-icons/hi'
 import {HiEnvelope} from 'react-icons/hi2'
 import { RiTwitterXLine } from "react-icons/ri";
+import { AiOutlineHeart } from "react-icons/ai";
 import React from 'react'
 import Link from 'next/link'
 
