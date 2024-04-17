@@ -10,11 +10,11 @@ import MainComponent from "./components/MainComponent";
 const page = () => {
   return (
     <div className="w-full h-full flex justify-center items-center relative bg-black">
-      <div className="max-w-[70vw] w-full h-full flex relative border-4">
+      <div className="max-w-[70vw] h-full flex relative border-4">
           <LeftSidebar />
           <MainComponent />
           <section
-          className="w-[20%] border-4 flex flex-col items-stretch h-screen px-6">
+          className="w-[25%] border-4 flex flex-col items-stretch h-screen px-4">
             <div>
               <div className="relative w-full h-full">
                 <label 
@@ -26,7 +26,7 @@ const page = () => {
                 id="searchBox"
                 type="text"
                 placeholder="Search Twitter"
-                className="outline-none bg-transparent border-none w-full h-full rounded-xl py-4 px-6"
+                className="outline-none bg-transparent border-none w-full h-full rounded-xl py-4 px-8"
                 />
               </div>
             </div>
