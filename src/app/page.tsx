@@ -10,7 +10,7 @@ import MainComponent from "./components/MainComponent";
 const page = () => {
   return (
     <div className="w-full h-full flex justify-center items-center relative bg-black">
-      <div className="max-w-[70vw] h-full flex relative border">
+      <div className="max-w-[80vw] h-full flex relative">
           <LeftSidebar />
           <MainComponent />
           <section
@@ -26,7 +26,7 @@ const page = () => {
                 id="searchBox"
                 type="text"
                 placeholder="Search Twitter"
-                className="outline-none bg-transparent border-none w-full h-full rounded-xl py-4 px-8"
+                className="outline-none focus:border-primary bg-transparent border w-full h-full rounded-xl py-4 pl-14 pr-4"
                 />
               </div>
             </div>
