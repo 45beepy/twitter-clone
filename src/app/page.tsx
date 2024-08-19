@@ -11,7 +11,7 @@ const RightSection = () => {
       <Leftsidebar />
      <MainComponent />
 
-     <section className="w-full sticky hidden top-2 overflow-y-auto mt-2 xl:flex flex-col items-stretch h-[90vh] overflow-x-hidden px-6">
+     <section className="w-[28%] sticky hidden top-2 overflow-y-auto mt-2 xl:flex flex-col items-stretch h-[90vh] overflow-x-hidden px-6">
        <div>
          <div className="relative w-full h-full group">
            <input
@@ -22,9 +22,9 @@ const RightSection = () => {
            />
            <label
              htmlFor="searchBox"
-             className="absolute top-0 left-0 h-full flex items-center justify-center p-4 text-gray-500 peer-focus:text-primary"
+             className="absolute top-0 left-0  flex items-center justify-center p-4 text-gray-500 peer-focus:text-primary w-5 h-5"
            >
-             <BsSearch className="w-5 h-5" />
+             <BsSearch />
            </label>
          </div>
        </div>

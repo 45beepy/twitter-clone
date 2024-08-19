@@ -23,12 +23,12 @@ const MainComponent = () => {
             placeholder="What's happening?"
           />
           <div className="flex justify-between items-center mt-3">
-            <div className="flex items-center space-x-4 text-blue-500">
-              <RiImageLine className="cursor-pointer hover:bg-blue-100 hover:bg-opacity-10 p-2 rounded-full" size={38} />
-              <MdOutlineGif className="cursor-pointer hover:bg-blue-100 hover:bg-opacity-10 p-2 rounded-full" size={38} />
-              <RiBarChartHorizontalLine className="cursor-pointer hover:bg-blue-100 hover:bg-opacity-10 p-2 rounded-full" size={38} />
-              <HiOutlineEmojiHappy className="cursor-pointer hover:bg-blue-100 hover:bg-opacity-10 p-2 rounded-full" size={38} />
-              <HiOutlineCalendar className="cursor-pointer hover:bg-blue-100 hover:bg-opacity-10 p-2 rounded-full" size={38} />
+            <div className="flex items-center space-x-4 text-blue-500 cursor-pointer hover:bg-blue-100 hover:bg-opacity-10 p-2 rounded-full">
+              <RiImageLine  size={38} />
+              <MdOutlineGif  size={38} />
+              <RiBarChartHorizontalLine  size={38} />
+              <HiOutlineEmojiHappy  size={38} />
+              <HiOutlineCalendar  size={38} />
             </div>
             <button className="bg-blue-500 hover:bg-blue-600 transition-colors text-white font-bold rounded-full px-4 py-2">
               Tweet
@@ -57,20 +57,20 @@ const MainComponent = () => {
 
               {/* Tweet actions */}
               <div className="flex justify-between text-gray-500">
-                <div className="flex items-center space-x-2 group cursor-pointer">
-                  <FaRegComment size={20} className="group-hover:text-blue-500" />
+                <div className="flex items-center space-x-2 group cursor-pointer group-hover:text-blue-500">
+                  <FaRegComment size={20}  />
                   <span className="group-hover:text-blue-500">23</span>
                 </div>
-                <div className="flex items-center space-x-2 group cursor-pointer">
-                  <FaRetweet size={20} className="group-hover:text-green-500" />
+                <div className="flex items-center space-x-2 group cursor-pointer group-hover:text-green-500">
+                  <FaRetweet size={20}  />
                   <span className="group-hover:text-green-500">10</span>
                 </div>
-                <div className="flex items-center space-x-2 group cursor-pointer">
-                  <AiOutlineHeart size={20} className="group-hover:text-pink-500" />
+                <div className="flex items-center space-x-2 group cursor-pointer group-hover:text-pink-500">
+                  <AiOutlineHeart size={20}  />
                   <span className="group-hover:text-pink-500">99</span>
                 </div>
-                <div className="flex items-center space-x-2 group cursor-pointer">
-                  <BsUpload size={20} className="group-hover:text-blue-500" />
+                <div className="flex items-center space-x-2 group cursor-pointer group-hover:text-blue-500">
+                  <BsUpload size={20} />
                 </div>
               </div>
             </div>
