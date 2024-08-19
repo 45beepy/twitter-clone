@@ -1,65 +1,46 @@
-import { title } from 'process'
-import {BiHomeCircle,BiUser} from 'react-icons/bi'
-import {BsBell,BsBookmark, BsThreeDots} from 'react-icons/bs'
-import {HiOutlineHashtag} from 'react-icons/hi'
-import {HiEnvelope} from 'react-icons/hi2'
-import { RiTwitterXLine } from "react-icons/ri";
-import { AiOutlineHeart } from "react-icons/ai";
-import React from 'react'
-import Link from 'next/link'
+import Link from "next/link";
+import { BiHomeCircle, BiUser } from "react-icons/bi";
+import { BsBell, BsBookmark, BsTwitter, BsEnvelope, BsThreeDots } from "react-icons/bs";
+import { HiOutlineHashtag } from "react-icons/hi";
 
 const NAVIGATION_ITEMS = [
-  {
-    title:'Twitter',
-    icon: RiTwitterXLine
-  },
-  {
-    title:'Home',
-    icon: BiHomeCircle
-  },
-  {
-    title:'Explore',
-    icon: HiOutlineHashtag
-  },
-  {
-    title:'Notifications',
-    icon: BsBell
-  },
-  {
-    title:'Messages',
-    icon: HiEnvelope
-  },
-  {
-    title: 'Bookmarks',
-    icon: BsBookmark
-  },
-  {
-    title: 'Profile',
-    icon: BiUser
-  }
-
-
-]
+  { title: "Twitter", icon: BsTwitter },
+  { title: "Home", icon: BiHomeCircle },
+  { title: "Explore", icon: HiOutlineHashtag },
+  { title: "Notifications", icon: BsBell },
+  { title: "Messages", icon: BsEnvelope },
+  { title: "Bookmarks", icon: BsBookmark },
+  { title: "Profile", icon: BiUser },
+];
 
 const LeftSidebar = () => {
+  const user = {
+    full_name: "John Doe",
+    username: "johndoe",
+  };
+
   return (
-    <div>
-         <section className="w-full sticky top-0 xl:flex flex-col items-stretch h-screen hidden">
+    <section className="w-[23%] sticky top-0 xl:flex flex-col items-stretch h-screen hidden">
       <div className="flex flex-col items-stretch h-full space-y-4 mt-4">
         {NAVIGATION_ITEMS.map((item) => (
           <Link
+            key={item.title}
             className="hover:bg-white/10 text-2xl transition duration-200 flex items-center justify-start w-fit space-x-4 rounded-3xl py-2 px-6"
-            href={`/${item.title.toLowerCase()}`} key={item.title}>
-                  <div>
-                    <item.icon/>
-                  </div>
-                  <div>
-                    {item.title !== "Twitter" && <div>{item.title }</div>}
-                  </div>
-                </Link>
-              ))
+            href={
+              item.title.toLocaleLowerCase() === "home"
+                ? "/"
+                : item.title.toLocaleLowerCase() === "profile"
+                ? user.username || "#"
+                : `/${item.title.toLowerCase()}`
             }
-            <button className="rounded-full m-4 bg-primary p-4 text-2xl text-center hover:bg-opacity-70 transition duration-200">
+          >
+            <div>
+              <item.icon />
+            </div>
+            {item.title !== "Twitter" && <div>{item.title}</div>}
+          </Link>
+        ))}
+        <button className="bg-blue-500 hover:bg-blue-600 transition-colors text-white font-bold rounded-full px-4 py-2 w-48">
           Tweet
         </button>
       </div>
@@ -67,10 +48,8 @@ const LeftSidebar = () => {
         <div className="flex items-center space-x-2">
           <div className="rounded-full bg-slate-400 w-10 h-10"></div>
           <div className="text-left text-sm">
-            <div className="font-semibold">
-              Pravin
-            </div>
-            <div className="">@45beepy</div>
+            <div className="font-semibold">{user.full_name}</div>
+            <div>@{user.username}</div>
           </div>
         </div>
         <div>
@@ -78,8 +57,7 @@ const LeftSidebar = () => {
         </div>
       </button>
     </section>
-  </div>
-  )
+  );
 };
 
-export default LeftSidebar
+export default LeftSidebar;

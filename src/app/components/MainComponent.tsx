@@ -1,77 +1,84 @@
-import React from 'react'
-import { BsDot } from "react-icons/bs";
-import { AiOutlineHeart } from "react-icons/ai";
-import { BsChat } from "react-icons/bs";
-import { IoMdStats } from "react-icons/io";
-import { IoShareSocialOutline } from "react-icons/io5";
-import { AiOutlineRetweet } from "react-icons/ai";
-
+import { FaRegComment, FaRetweet } from "react-icons/fa";
+import { AiOutlineHeart, AiOutlineShareAlt } from "react-icons/ai";
+import { BsUpload } from "react-icons/bs";
+import { HiOutlineEmojiHappy, HiOutlineCalendar } from "react-icons/hi";
+import { RiImageLine, RiBarChartHorizontalLine } from "react-icons/ri";
+import { MdOutlineGif } from "react-icons/md";
 
 const MainComponent = () => {
   return (
-    <main className="flex w-[50%] h-full min-h-screen flex-col border-l-[0.5px] border-r-[0.5px] border-gray-600">
-          <h1 className="text-xl font-bold p-6 backdrop-blur bg-black/10 sticky top-0">Home</h1>
-          <div className="border-t-[0.5px] border-b-[0.5px] px-4 border-gray-600 flex items-stretch py-4 space-x-2 h-32 relative">
-            <div className="w-10 h-10 bg-slate-400 flex-none rounded-full"></div>
-            <div className="flex flex-col w-full">
-                  <input type="text" 
-                  className="w-full h-full bg-transparent border-b-[0.5px] p-4 outline-none border-none"
-                  placeholder="What's Happening"/>
-              <div className="w-full justify-between items-center flex">
-                <div>
+    <main className="flex w-[600px] h-full min-h-screen flex-col border-l-[0.5px] border-r-[0.5px] border-gray-600">
+      {/* Home header */}
+      <h1 className="text-xl font-bold p-6 backdrop-blur bg-black/10 sticky top-0 z-10 border-b-[0.5px] border-gray-600">
+        Home
+      </h1>
 
+      {/* Tweet compose section */}
+      <div className="border-b-[0.5px] border-gray-600 p-4 flex space-x-4">
+        <div className="w-12 h-12 bg-slate-400 rounded-full"></div>
+        <div className="flex-1 flex flex-col">
+          <input
+            type="text"
+            className="w-full bg-transparent p-2 outline-none text-lg"
+            placeholder="What's happening?"
+          />
+          <div className="flex justify-between items-center mt-3">
+            <div className="flex items-center space-x-4 text-blue-500">
+              <RiImageLine className="cursor-pointer hover:bg-blue-100 hover:bg-opacity-10 p-2 rounded-full" size={38} />
+              <MdOutlineGif className="cursor-pointer hover:bg-blue-100 hover:bg-opacity-10 p-2 rounded-full" size={38} />
+              <RiBarChartHorizontalLine className="cursor-pointer hover:bg-blue-100 hover:bg-opacity-10 p-2 rounded-full" size={38} />
+              <HiOutlineEmojiHappy className="cursor-pointer hover:bg-blue-100 hover:bg-opacity-10 p-2 rounded-full" size={38} />
+              <HiOutlineCalendar className="cursor-pointer hover:bg-blue-100 hover:bg-opacity-10 p-2 rounded-full" size={38} />
+            </div>
+            <button className="bg-blue-500 hover:bg-blue-600 transition-colors text-white font-bold rounded-full px-4 py-2">
+              Tweet
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Timeline */}
+      <div className="flex flex-col divide-y-[0.5px] divide-gray-600">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <div key={i} className="px-4 py-6 flex space-x-4 hover:bg-gray-800 transition-colors duration-200 cursor-pointer">
+            <div className="w-12 h-12 bg-slate-400 rounded-full"></div>
+            <div className="flex flex-col space-y-2 w-full">
+              {/* Tweet content */}
+              <div className="text-white">
+                <span className="font-semibold">User {i + 1} </span>
+                <span className="text-gray-500">@username · 1h</span>
+                <p className="mt-1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deserunt fugit id autem mollitia vero cum officia animi ipsa.
+                </p>
+              </div>
+
+              {/* Tweet media (optional) */}
+              <div className="bg-slate-400 aspect-square w-full h-96 rounded-xl"></div>
+
+              {/* Tweet actions */}
+              <div className="flex justify-between text-gray-500">
+                <div className="flex items-center space-x-2 group cursor-pointer">
+                  <FaRegComment size={20} className="group-hover:text-blue-500" />
+                  <span className="group-hover:text-blue-500">23</span>
                 </div>
-                <div className="w-full max-w-[100px]">
-                  <button className='m-2 rounded-full bg-primary px-4 py-2 text-lg text-center hover:bg-opacity-70 transition duration-200 font-bold'>Post</button>
+                <div className="flex items-center space-x-2 group cursor-pointer">
+                  <FaRetweet size={20} className="group-hover:text-green-500" />
+                  <span className="group-hover:text-green-500">10</span>
+                </div>
+                <div className="flex items-center space-x-2 group cursor-pointer">
+                  <AiOutlineHeart size={20} className="group-hover:text-pink-500" />
+                  <span className="group-hover:text-pink-500">99</span>
+                </div>
+                <div className="flex items-center space-x-2 group cursor-pointer">
+                  <BsUpload size={20} className="group-hover:text-blue-500" />
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-col">
-            {
-              Array.from({length:5}).map((_,i)=>(
-                <div key={i} className="border-b-[0.5px] border-gray-600 p-4 flex spacce-x-4">   
-                  <div >
-                    <div className="w-10 h-10 bg-slate-200 rounded-full"/>
-                  </div>
-                  <div className="flex flex-col pl-3">
-                    <div className="flex items-center space-x-1">
-                      <div>Rusted Reaper</div>
-                      <div>@rustedreaper</div>
-                      <div>
-                        <BsDot/>
-                      </div>
-                      <div>1 hour ago</div>
-                    </div>
-                    <div className="text-white text-l">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum accusantium eveniet neque explicabo fugit necessitatibus odio, nemo suscipit. Ducimus officia ratione repudiandae ipsum fugiat magnam aliquid quasi earum consequuntur? Culpa libero, magnam placeat consequatur sapiente consectetur ullam ea recusandae porro iusto, nemo tempora unde perspiciatis quibusdam quis aperiam nam eius iure fugit, nihil possimus ut? Veniam accusantium magni minus. Incidunt earum, enim, eius aperiam quaerat omnis eveniet maiores consectetur porro facere non corrupti, est corporis iste ullam repellendus ut similique autem natus! Dicta ducimus officia, quam asperiores molestias reiciendis voluptates nihil illo voluptas eligendi consequuntur tempore rerum. Eum, at et.
-                    </div>
-                    <div className="bg-slate-400 aspect-square w-full h-80 rounded-xl mt-2"></div>
-                    <div className="flex items-center justify-start space-x-20 mt-2 w-full">
-                      <div className="rounded-full hover:bg-white/100 p-3 transition duration-200 cursor-pointer">
-                        <BsChat />
-                      </div>
-                      <div className="rounded-full hover:bg-white/100 p-3 transition duration-200 cursor-pointer">
-                        <AiOutlineRetweet />
-                      </div>
-                      <div className="rounded-full hover:bg-white/100 p-3 transition duration-200 cursor-pointer">
-                        <AiOutlineHeart />
-                      </div>
-                      <div className="rounded-full hover:bg-white/100 p-3 transition duration-200 cursor-pointer">
-                        <IoMdStats />
-                      </div>
-                      <div className="rounded-full hover:bg-white/100 p-3 transition duration-200 cursor-pointer">
-                        <IoShareSocialOutline />
-                      </div>
-                    </div>  
-                  </div>   
-                </div>
-              ))
-            }
-          </div>
+        ))}
+      </div>
+    </main>
+  );
+};
 
-        </main>
-  )
-}
-
-export default MainComponent
+export default MainComponent;
