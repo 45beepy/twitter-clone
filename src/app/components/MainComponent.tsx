@@ -5,7 +5,7 @@ import { HiOutlineEmojiHappy, HiOutlineCalendar } from "react-icons/hi";
 import { RiImageLine, RiBarChartHorizontalLine } from "react-icons/ri";
 import { MdOutlineGif } from "react-icons/md";
 
-const MainComponent = () => {
+const Maincomponent = () => {
   return (
     <main className="flex w-[600px] h-full min-h-screen flex-col border-l-[0.5px] border-r-[0.5px] border-gray-600">
       {/* Home header */}
@@ -81,4 +81,4 @@ const MainComponent = () => {
   );
 };
 
-export default MainComponent;
+export default Maincomponent;
