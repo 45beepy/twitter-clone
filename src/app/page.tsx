@@ -1,13 +1,13 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
-import Leftsidebar from "./components/Leftsidebar";
-import MainComponent from "./components/Maincomponent";
+import Leftsidebar from "./components/Leftsidebar/Leftsidebar";
+import Maincomponent from "./components/Maincomponent/Maincomponent";
 const RightSection = () => {
   return (
     <div className="flex w-full h-full justify-center relative items-center bg-black">
       <div className="max-w-[70vw] w-full h-full flex relative">
       <Leftsidebar />
-     <MainComponent />
+      <Maincomponent />
      <section className="w-[28%] sticky hidden top-2 overflow-y-auto mt-2 xl:flex flex-col items-stretch h-[90vh] overflow-x-hidden px-6">
        <div>
          <div className="relative w-full h-full group">
