@@ -13,7 +13,7 @@ const NAVIGATION_ITEMS = [
   { title: "Profile", icon: BiUser },
 ];
 
-const LeftSidebar = () => {
+const Leftsidebar = () => {
   const user = {
     full_name: "John Doe",
     username: "johndoe",
@@ -60,4 +60,4 @@ const LeftSidebar = () => {
   );
 };
 
-export default LeftSidebar;
+export default Leftsidebar;
